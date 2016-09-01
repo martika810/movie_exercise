@@ -140,5 +140,9 @@ public class Movie {
 			
 	}	
 	
+	public String prettyText(){
+		return new StringBuffer("Movie: ").append(title).append(" Year: ").append(year).toString();
+	}
+	
 
 }

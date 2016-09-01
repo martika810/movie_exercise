@@ -26,7 +26,7 @@ public class App {
 							+ movieArg);
 			printTitleBar();
 			for (Movie movie : moviesFromMoviesApi) {
-				System.out.println(movie);
+				System.out.println(movie.prettyText());
 				System.out.println("");
 			}
 		} else {
@@ -37,7 +37,7 @@ public class App {
 
 			printTitleBar();
 			for (Movie movie : moviesFromOmdbApi) {
-				System.out.println(movie);
+				System.out.println(movie.prettyText());
 				System.out.println("");
 			}
 		}
