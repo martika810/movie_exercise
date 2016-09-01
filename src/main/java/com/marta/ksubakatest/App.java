@@ -24,9 +24,10 @@ public class App {
 			List<Movie> moviesFromMoviesApi = retrieveMovieCommand
 					.execute(MOVIES_API_URL + "?y=&type=movie&r=json&t="
 							+ movieArg);
-
+			printTitleBar();
 			for (Movie movie : moviesFromMoviesApi) {
 				System.out.println(movie);
+				System.out.println("");
 			}
 		} else {
 
@@ -34,9 +35,18 @@ public class App {
 			List<Movie> moviesFromOmdbApi = retrieveMovieWrapperCommand
 					.execute(OMDB_API_URL + "?r=json&s=" + movieArg);
 
+			printTitleBar();
 			for (Movie movie : moviesFromOmdbApi) {
 				System.out.println(movie);
+				System.out.println("");
 			}
 		}
+	}
+	
+	private static void printTitleBar(){
+		System.out.println("--------------------------------------------------");
+		System.out.println("              MOVIES                              ");
+		System.out.println("--------------------------------------------------");
+		System.out.println("");
 	}
 }
