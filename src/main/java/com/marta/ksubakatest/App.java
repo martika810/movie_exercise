@@ -6,10 +6,7 @@ import com.marta.ksubakatest.commands.RetrieveMovieResponseNoWrapperCommand;
 import com.marta.ksubakatest.commands.RetrieveMovieResponseWithWrapperCommand;
 import com.marta.ksubakatest.domainbean.Movie;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
 	public static final String MOVIES_API_URL = "https://moviesapi.com/m.php";
 	public static final String OMDB_API_URL = "http://www.omdbapi.com/";
@@ -19,14 +16,14 @@ public class App {
 
 	public static void main(String[] args) {
 
-		CommandLineArguments arguments = CommandLineArguments.createInstance(args);
+		String apiArg = System.getProperty("api");
+		String movieArg = System.getProperty("movie");
 		
-		
-		if (MOVIES_API.equals(arguments.getApi())) {
+		if (MOVIES_API.equals(apiArg)) {
 			RetrieveMovieResponseNoWrapperCommand retrieveMovieCommand = new RetrieveMovieResponseNoWrapperCommand();
 			List<Movie> moviesFromMoviesApi = retrieveMovieCommand
 					.execute(MOVIES_API_URL + "?y=&type=movie&r=json&t="
-							+ arguments.getMovie());
+							+ movieArg);
 
 			for (Movie movie : moviesFromMoviesApi) {
 				System.out.println(movie);
@@ -35,7 +32,7 @@ public class App {
 
 			RetrieveMovieResponseWithWrapperCommand retrieveMovieWrapperCommand = new RetrieveMovieResponseWithWrapperCommand();
 			List<Movie> moviesFromOmdbApi = retrieveMovieWrapperCommand
-					.execute(OMDB_API_URL + "?r=json&s=" + arguments.getMovie());
+					.execute(OMDB_API_URL + "?r=json&s=" + movieArg);
 
 			for (Movie movie : moviesFromOmdbApi) {
 				System.out.println(movie);
