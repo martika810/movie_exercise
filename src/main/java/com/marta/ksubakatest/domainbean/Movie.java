@@ -131,8 +131,11 @@ public class Movie {
 			return false;
 		}
 		Movie other = (Movie) obj;
-		return  (other.imdbID.equals(imdbID) && other.title.equals(title)&& other.poster.equals(poster) &&
-				other.type.equals(type) && other.year.equals(year));
+		return  ((other.imdbID==null)?other.imdbID==imdbID:other.imdbID.equals(imdbID)) && 
+				((other.title==null)?other.title==title:other.title.equals(title)) && 
+				((other.poster==null)?other.poster==poster:other.poster.equals(poster)) &&
+				((other.type==null)?other.type==type:other.type.equals(type)) && 
+				((other.year==null)?other.year==year:other.year.equals(year));
 				
 			
 	}	
