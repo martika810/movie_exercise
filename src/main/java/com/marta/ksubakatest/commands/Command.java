@@ -1,4 +1,4 @@
-package com.marta.ksubakatest;
+package com.marta.ksubakatest.commands;
 
 import java.util.List;
 

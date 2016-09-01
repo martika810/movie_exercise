@@ -1,4 +1,4 @@
-package com.marta.ksubakatest;
+package com.marta.ksubakatest.receivers;
 
 import java.io.IOException;
 import java.net.URI;
@@ -23,6 +23,7 @@ import com.marta.ksubakatest.domainbean.Movie;
 import com.marta.ksubakatest.jsonbean.MovieList;
 import com.marta.ksubakatest.jsonbean.MovieMoviesApiBuilder;
 import com.marta.ksubakatest.jsonbean.MovieOmdbApiBuilder;
+import com.marta.ksubakatest.utilities.HttpUtility;
 
 public class MovieHttpQueryReceiver implements HttpReceiver<Movie> {
 	

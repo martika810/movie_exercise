@@ -1,4 +1,4 @@
-package com.marta.ksubakatest;
+package com.marta.ksubakatest.receivers;
 
 import java.util.List;
 

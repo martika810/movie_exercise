@@ -2,6 +2,8 @@ package com.marta.ksubakatest;
 
 import java.util.List;
 
+import com.marta.ksubakatest.commands.RetrieveMovieResponseNoWrapperCommand;
+import com.marta.ksubakatest.commands.RetrieveMovieResponseWithWrapperCommand;
 import com.marta.ksubakatest.domainbean.Movie;
 
 /**

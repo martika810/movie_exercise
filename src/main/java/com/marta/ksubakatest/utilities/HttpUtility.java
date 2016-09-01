@@ -1,4 +1,4 @@
-package com.marta.ksubakatest;
+package com.marta.ksubakatest.utilities;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import org.apache.http.HttpResponse;
 
 public class HttpUtility {
+	
+	private HttpUtility(){}
 	
 	public static String convertToText(HttpResponse response) throws UnsupportedOperationException, IOException{
 		BufferedReader rd = new BufferedReader(
