@@ -1,0 +1,8 @@
+com/marta/ksubakatest/HttpReceiver.class
+com/marta/ksubakatest/MovieHttpQueryReceiver.class
+com/marta/ksubakatest/Command.class
+com/marta/ksubakatest/MovieHttpQueryReceiver$1.class
+com/marta/ksubakatest/MovieHttpQueryReceiver$SingletonHelper.class
+com/marta/ksubakatest/domainbean/Movie.class
+com/marta/ksubakatest/RetrieveMovieCommand.class
+com/marta/ksubakatest/App.class
